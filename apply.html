@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#090a12" />
+        <title>Apply for a bus pass | CityRide</title>
+        <link rel="icon" href="bus-logo.png" type="image/png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/js/ui.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link btn btn-primary">Skip to content</a>
+        <header class="navbar">
+            <a href="index.html" class="logo"><span class="brand-mark" aria-hidden="true"></span>CityRide</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="apply.html" class="active" aria-current="page">Apply</a>
+                <a href="pass.html">My pass</a>
+            </nav>
+            <div class="nav-buttons">
+                <button type="button" class="btn btn-outline" onclick="logout()">Sign out</button>
+            </div>
+        </header>
+
+        <main id="main-content" class="form-section application-layout">
+            <div class="form-intro">
+                <h1>Apply for a bus pass.</h1>
+                <p>Tell us who’s travelling, where you’re going, and how long you need the pass.</p>
+            </div>
+            <div class="form-card">
+                <h2>Application details</h2>
+                <form id="applicationForm">
+                    <fieldset class="form-group">
+                        <legend>Personal details</legend>
+                        <div class="fields-grid">
+                            <div class="field">
+                                <label for="appName">Full name</label>
+                                <input id="appName" type="text" autocomplete="name" required />
+                            </div>
+                            <div class="field">
+                                <label for="dob">Date of birth</label>
+                                <input id="dob" type="date" autocomplete="bday" required />
+                            </div>
+                            <div class="field">
+                                <label for="gender">Gender</label>
+                                <select id="gender" required>
+                                    <option value="">Select gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="appPhone">Phone number</label>
+                                <input
+                                    id="appPhone"
+                                    type="tel"
+                                    autocomplete="tel-national"
+                                    inputmode="numeric"
+                                    pattern="[6-9][0-9]{9}"
+                                    maxlength="10"
+                                    required
+                                />
+                            </div>
+                            <div class="field field-wide">
+                                <label for="appEmail">Email address</label>
+                                <input id="appEmail" type="email" autocomplete="email" required />
+                            </div>
+                            <div class="field field-wide">
+                                <label for="address">Address</label>
+                                <textarea
+                                    id="address"
+                                    rows="3"
+                                    autocomplete="street-address"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="field field-wide">
+                                <label for="passengerType">Passenger type</label>
+                                <select id="passengerType" required>
+                                    <option value="Student">Student</option>
+                                    <option value="General">General public</option>
+                                </select>
+                            </div>
+                            <div id="studentFields">
+                                <div class="field">
+                                    <label for="institution">School or college</label>
+                                    <input id="institution" type="text" placeholder="Institution name" />
+                                </div>
+                                <div class="field">
+                                    <label for="studentId">Student ID or roll number</label>
+                                    <input id="studentId" type="text" placeholder="Student ID" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <legend>Route and validity</legend>
+                        <div class="fields-grid">
+                            <div class="field">
+                                <label for="source">Starting point</label>
+                                <input id="source" type="text" placeholder="Starting location" required />
+                            </div>
+                            <div class="field">
+                                <label for="destination">Destination</label>
+                                <input id="destination" type="text" placeholder="Destination" required />
+                            </div>
+                            <div class="field field-wide">
+                                <label for="duration">Pass duration</label>
+                                <select id="duration" required>
+                                    <option value="">Select duration</option>
+                                    <option value="Monthly">Monthly</option>
+                                    <option value="Quarterly">Quarterly</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary form-btn">
+                        Submit application <span aria-hidden="true">→</span>
+                    </button>
+                </form>
+                <p id="applicationMessage" class="message" role="status"></p>
+            </div>
+        </main>
+        <script src="js/js/auth.js"></script>
+        <script src="js/js/apply.js"></script>
+    </body>
+</html>

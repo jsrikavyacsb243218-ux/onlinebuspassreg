@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#090a12" />
+        <title>Online Bus Pass System | CityRide</title>
+        <link rel="icon" href="bus-logo.png" type="image/png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/js/ui.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link btn btn-primary">Skip to content</a>
+        <header class="navbar">
+            <a href="index.html" class="logo"><span class="brand-mark" aria-hidden="true"></span>CityRide</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html" class="active" aria-current="page">Home</a>
+                <a href="about.html">About</a>
+                <a href="#passes">Pass types</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Sign in</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="tagline">Online bus passes</p>
+                    <h1><span>Your city.</span><span class="accent-text">Your ride.</span></h1>
+                    <p>
+                        Apply for a student or commuter bus pass, track your application, and print your
+                        digital pass once it’s approved.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="register.html" class="btn btn-primary btn-large"
+                            >Apply for a bus pass <span aria-hidden="true">↗</span></a
+                        >
+                        <a href="#how-it-works" class="btn btn-outline btn-large">How it works</a>
+                    </div>
+                </div>
+                <figure class="hero-image">
+                    <img
+                        src="assets/cityride-night-bus.webp"
+                        width="1120"
+                        height="1400"
+                        alt="Violet city bus on a rain-lit street"
+                        fetchpriority="high"
+                    />
+                    <figcaption>
+                        <a class="image-card" href="pass.html">
+                            <span class="icon-tile" aria-hidden="true">&#9671;</span>
+                            <span>Open my digital pass</span>
+                            <span aria-hidden="true">&#8599;</span>
+                        </a>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section class="features" aria-labelledby="features-title">
+                <div class="section-heading"><h2 id="features-title">Manage your bus pass online</h2></div>
+                <div class="feature-grid">
+                    <article class="feature-card" data-spotlight>
+                        <span class="icon-tile" aria-hidden="true">↗</span>
+                        <h3>Apply from anywhere</h3>
+                        <p>Create an account and submit your application online.</p>
+                    </article>
+                    <article class="feature-card" data-spotlight>
+                        <span class="icon-tile" aria-hidden="true">⇄</span>
+                        <h3>Choose your route</h3>
+                        <p>Enter your starting point, destination and pass duration.</p>
+                    </article>
+                    <article class="feature-card" data-spotlight>
+                        <span class="icon-tile" aria-hidden="true">◷</span>
+                        <h3>Follow your application</h3>
+                        <p>Check the latest decision from your dashboard.</p>
+                    </article>
+                    <article class="feature-card" data-spotlight>
+                        <span class="icon-tile" aria-hidden="true">◇</span>
+                        <h3>Print your digital pass</h3>
+                        <p>Open your approved pass to see its route and validity dates.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="passes" id="passes" aria-labelledby="passes-title">
+                <div class="section-heading">
+                    <h2 id="passes-title">Choose your pass</h2>
+                    <p>Monthly and quarterly options are available for both passenger categories.</p>
+                </div>
+                <div class="pass-grid">
+                    <article class="pass-card" data-spotlight>
+                        <span class="icon-tile" aria-hidden="true">✦</span>
+                        <h3>Student bus pass</h3>
+                        <p>For students travelling to school or college.</p>
+                        <ul>
+                            <li>Institution name and student ID</li>
+                            <li>Your chosen route</li>
+                            <li>Digital pass after approval</li>
+                        </ul>
+                        <a href="register.html" class="btn btn-outline">Apply now →</a>
+                    </article>
+                    <article class="pass-card" data-spotlight>
+                        <span class="icon-tile" aria-hidden="true">↔</span>
+                        <h3>General bus pass</h3>
+                        <p>For daily commuters and other passengers.</p>
+                        <ul>
+                            <li>Passenger and contact details</li>
+                            <li>Your chosen route</li>
+                            <li>Digital pass after approval</li>
+                        </ul>
+                        <a href="register.html" class="btn btn-outline">Apply now →</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="how-it-works" id="how-it-works" aria-labelledby="steps-title">
+                <div class="section-heading"><h2 id="steps-title">How it works</h2></div>
+                <ol class="steps-grid">
+                    <li class="step">
+                        <span class="step-number" aria-hidden="true">01</span>
+                        <h3>Create an account</h3>
+                        <p>Register with your name and contact details.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-number" aria-hidden="true">02</span>
+                        <h3>Submit an application</h3>
+                        <p>Choose your route and pass duration.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-number" aria-hidden="true">03</span>
+                        <h3>Track the review</h3>
+                        <p>Check your dashboard for an update.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-number" aria-hidden="true">04</span>
+                        <h3>Get your pass</h3>
+                        <p>View or print it after approval.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="cta">
+                <div>
+                    <h2>Ready to apply?</h2>
+                    <p>Create a CityRide account to submit your first application.</p>
+                </div>
+                <a href="register.html" class="btn btn-primary btn-large"
+                    >Create an account <span aria-hidden="true">↗</span></a
+                >
+            </section>
+        </main>
+
+        <footer id="contact" class="footer">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo"
+                        ><span class="brand-mark" aria-hidden="true"></span>CityRide</a
+                    >
+                    <p>Online bus pass registration for students and daily commuters.</p>
+                </div>
+                <div>
+                    <h3>Quick links</h3>
+                    <a href="about.html">About CityRide</a><a href="register.html">Register</a
+                    ><a href="login.html">Sign in</a><a href="admin-login.html">Admin sign in</a>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>support@cityride.example</p>
+                    <p>+91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 CityRide. Academic project demonstration.</p></div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#090a12" />
+        <title>Passenger dashboard | CityRide</title>
+        <link rel="icon" href="bus-logo.png" type="image/png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/js/ui.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link btn btn-primary">Skip to content</a>
+        <header class="navbar">
+            <a href="index.html" class="logo"><span class="brand-mark" aria-hidden="true"></span>CityRide</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="dashboard.html" class="active" aria-current="page">Dashboard</a>
+                <a href="apply.html">Apply</a>
+                <a href="pass.html">My pass</a>
+            </nav>
+            <div class="nav-buttons">
+                <button type="button" class="btn btn-outline" onclick="logout()">Sign out</button>
+            </div>
+        </header>
+
+        <main id="main-content" class="dashboard-section">
+            <div class="welcome-card">
+                <span class="tagline">Passenger dashboard</span>
+                <h1>Welcome, <span id="userName">passenger</span></h1>
+                <p>Track your applications and access your approved pass.</p>
+                <a href="apply.html" class="btn btn-primary">Apply for a pass →</a>
+            </div>
+            <div class="dashboard-grid">
+                <section class="dashboard-card" data-spotlight>
+                    <h2>Your profile</h2>
+                    <dl class="profile-list">
+                        <dt>Name</dt>
+                        <dd id="profileName"></dd>
+                        <dt>Email</dt>
+                        <dd id="profileEmail"></dd>
+                        <dt>Phone</dt>
+                        <dd id="profilePhone"></dd>
+                        <dt>Category</dt>
+                        <dd id="profileCategory"></dd>
+                    </dl>
+                </section>
+                <section class="dashboard-card" data-spotlight>
+                    <div class="status-heading">
+                        <h3>Latest application</h3>
+                        <span class="status-pill" id="applicationStatus">No application</span>
+                    </div>
+                    <p id="applicationInfo">Your first application will appear here.</p>
+                    <ol
+                        class="status-steps"
+                        aria-label="Application progress"
+                        id="applicationProgress"
+                        hidden
+                    >
+                        <li>Submitted</li>
+                        <li>Review</li>
+                        <li id="decisionStep">Decision</li>
+                    </ol>
+                </section>
+            </div>
+            <section class="dashboard-card">
+                <h2>My applications</h2>
+                <div class="table-responsive" tabindex="0" role="region" aria-label="My applications">
+                    <table aria-label="My applications">
+                        <thead>
+                            <tr>
+                                <th scope="col">Application ID</th>
+                                <th scope="col">Passenger type</th>
+                                <th scope="col">Route</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applicationTable">
+                            <tr>
+                                <td colspan="4">You haven’t submitted an application yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="pass.html" class="btn btn-outline">View digital pass →</a>
+            </section>
+        </main>
+        <script src="js/js/auth.js"></script>
+        <script src="js/js/dashboard.js"></script>
+    </body>
+</html>

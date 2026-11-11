@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#090a12" />
+        <title>Administrator sign in | CityRide</title>
+        <link rel="icon" href="bus-logo.png" type="image/png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/js/ui.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link btn btn-primary">Skip to content</a>
+        <header class="navbar">
+            <a href="index.html" class="logo"><span class="brand-mark" aria-hidden="true"></span>CityRide</a>
+
+            <div class="nav-buttons"><a href="login.html" class="btn btn-outline">Passenger sign in</a></div>
+        </header>
+
+        <main id="main-content" class="form-section">
+            <div class="form-intro">
+                <h1>Manage applications.</h1>
+                <p>Sign in to review submitted applications and see registered passengers.</p>
+                <figure class="hero-image">
+                    <img
+                        src="assets/cityride-night-bus.webp"
+                        width="1120"
+                        height="1400"
+                        alt="Violet city bus on a rain-lit street"
+                        loading="lazy"
+                    />
+                </figure>
+            </div>
+            <div class="form-card">
+                <h2>Administrator sign in</h2>
+                <form id="adminLoginForm">
+                    <div class="field">
+                        <label for="adminEmail">Admin email</label>
+                        <input
+                            id="adminEmail"
+                            type="email"
+                            autocomplete="username"
+                            placeholder="Enter admin email"
+                            required
+                        />
+                    </div>
+                    <div class="field">
+                        <label for="adminPassword">Password</label>
+                        <input
+                            id="adminPassword"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Enter admin password"
+                            required
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary form-btn">
+                        Sign in <span aria-hidden="true">→</span>
+                    </button>
+                </form>
+                <p id="adminMessage" class="message" role="status"></p>
+                <details class="demo-credentials">
+                    <summary>Demo admin credentials</summary>
+                    <p>Email: admin@cityride.com</p>
+                    <p>Password: Admin@123</p>
+                </details>
+            </div>
+        </main>
+        <script src="js/js/auth.js"></script>
+    </body>
+</html>

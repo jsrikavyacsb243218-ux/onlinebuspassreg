@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#090a12" />
+        <title>Sign in | CityRide</title>
+        <link rel="icon" href="bus-logo.png" type="image/png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/js/ui.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link btn btn-primary">Skip to content</a>
+        <header class="navbar">
+            <a href="index.html" class="logo"><span class="brand-mark" aria-hidden="true"></span>CityRide</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+            <div class="nav-buttons"><a href="register.html" class="btn btn-primary">Register</a></div>
+        </header>
+
+        <main id="main-content" class="form-section">
+            <div class="form-intro">
+                <h1>Welcome back.</h1>
+                <p>Track your applications and access your approved bus pass from your account.</p>
+                <figure class="hero-image">
+                    <img
+                        src="assets/cityride-night-bus.webp"
+                        width="1120"
+                        height="1400"
+                        alt="Violet city bus on a rain-lit street"
+                        loading="lazy"
+                    />
+                </figure>
+            </div>
+            <div class="form-card">
+                <h2>Sign in</h2>
+                <form id="loginForm">
+                    <div class="field">
+                        <label for="loginEmail">Email address</label>
+                        <input
+                            id="loginEmail"
+                            type="email"
+                            autocomplete="username"
+                            placeholder="you@example.com"
+                            required
+                        />
+                    </div>
+                    <div class="field">
+                        <label for="loginPassword">Password</label>
+                        <input
+                            id="loginPassword"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Enter your password"
+                            required
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary form-btn">
+                        Sign in <span aria-hidden="true">→</span>
+                    </button>
+                </form>
+                <p id="loginMessage" class="message" role="status"></p>
+                <p class="form-footer">New to CityRide? <a href="register.html">Create an account</a></p>
+                <p class="form-footer"><a href="admin-login.html">Administrator sign in</a></p>
+            </div>
+        </main>
+        <script src="js/js/auth.js"></script>
+    </body>
+</html>

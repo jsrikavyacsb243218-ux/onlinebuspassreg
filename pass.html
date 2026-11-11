@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#090a12" />
+        <title>My digital pass | CityRide</title>
+        <link rel="icon" href="bus-logo.png" type="image/png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/js/ui.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link btn btn-primary">Skip to content</a>
+        <header class="navbar">
+            <a href="index.html" class="logo"><span class="brand-mark" aria-hidden="true"></span>CityRide</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="apply.html">Apply</a>
+                <a href="pass.html" class="active" aria-current="page">My pass</a>
+            </nav>
+            <div class="nav-buttons">
+                <button type="button" class="btn btn-outline" onclick="logout()">Sign out</button>
+            </div>
+        </header>
+
+        <main id="main-content" class="dashboard-section pass-page">
+            <div class="section-heading">
+                <h1>My digital pass</h1>
+                <p>View and print your latest approved bus pass.</p>
+            </div>
+            <div id="passContainer" class="digital-pass is-empty">
+                <p role="status">Loading your bus pass…</p>
+            </div>
+            <div class="pass-actions">
+                <button id="printButton" type="button" class="btn btn-primary" onclick="printPass()" hidden>
+                    Print bus pass
+                </button>
+                <a href="dashboard.html" class="btn btn-outline">Back to dashboard</a>
+            </div>
+            <p id="passMessage" class="message" role="status"></p>
+        </main>
+        <script src="js/js/auth.js"></script>
+        <script src="js/js/pass.js"></script>
+    </body>
+</html>

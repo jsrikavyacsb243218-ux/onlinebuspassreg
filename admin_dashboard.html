@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#090a12" />
+        <title>Admin dashboard | CityRide</title>
+        <link rel="icon" href="bus-logo.png" type="image/png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/js/ui.js" defer></script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link btn btn-primary">Skip to content</a>
+        <header class="navbar">
+            <a href="index.html" class="logo"><span class="brand-mark" aria-hidden="true"></span>CityRide</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="admin_dashboard.html" class="active" aria-current="page">Dashboard</a>
+            </nav>
+            <div class="nav-buttons">
+                <button type="button" class="btn btn-outline" onclick="adminLogout()">Sign out</button>
+            </div>
+        </header>
+
+        <main id="main-content" class="dashboard-section">
+            <div class="welcome-card">
+                <h1>Admin dashboard</h1>
+                <p>Review bus pass applications and see registered passengers.</p>
+            </div>
+            <div class="stats-grid" aria-label="Application statistics">
+                <div class="stat-card" data-spotlight>
+                    <h2>Registered users</h2>
+                    <p id="totalUsers" class="stat-value">0</p>
+                </div>
+                <div class="stat-card" data-spotlight>
+                    <h2>Applications</h2>
+                    <p id="totalApplications" class="stat-value">0</p>
+                </div>
+                <div class="stat-card" data-spotlight>
+                    <h2>Pending review</h2>
+                    <p id="pendingApplications" class="stat-value">0</p>
+                </div>
+                <div class="stat-card" data-spotlight>
+                    <h2>Approved</h2>
+                    <p id="approvedApplications" class="stat-value">0</p>
+                </div>
+            </div>
+            <section class="dashboard-card" id="statusBreakdown" hidden>
+                <h2>Application breakdown</h2>
+                <div class="status-bar" aria-hidden="true">
+                    <span data-segment="Pending"></span><span data-segment="Approved"></span
+                    ><span data-segment="Rejected"></span>
+                </div>
+                <ul class="status-key">
+                    <li>
+                        <span class="status-pill" data-status="Pending">Pending</span>
+                        <strong data-count="Pending">0</strong>
+                    </li>
+                    <li>
+                        <span class="status-pill" data-status="Approved">Approved</span>
+                        <strong data-count="Approved">0</strong>
+                    </li>
+                    <li>
+                        <span class="status-pill" data-status="Rejected">Rejected</span>
+                        <strong data-count="Rejected">0</strong>
+                    </li>
+                </ul>
+            </section>
+            <section class="dashboard-card">
+                <h2>Application management</h2>
+                <div class="table-tools">
+                    <label for="searchApplication"
+                        >Search applications
+                        <input
+                            type="search"
+                            id="searchApplication"
+                            placeholder="Applicant name or application ID"
+                        />
+                    </label>
+                    <label for="statusFilter"
+                        >Status
+                        <select id="statusFilter">
+                            <option value="">All statuses</option>
+                            <option>Pending</option>
+                            <option>Approved</option>
+                            <option>Rejected</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="table-responsive" tabindex="0" role="region" aria-label="Applications">
+                    <table aria-label="Applications">
+                        <thead>
+                            <tr>
+                                <th scope="col">Application ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Route</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminApplicationTable">
+                            <tr>
+                                <td colspan="7">No applications found.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p id="reviewMessage" class="message" role="status"></p>
+            </section>
+            <section class="dashboard-card">
+                <h2>Registered users</h2>
+                <div class="table-responsive" tabindex="0" role="region" aria-label="Registered users">
+                    <table aria-label="Registered users">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Category</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminUserTable">
+                            <tr>
+                                <td colspan="4">No users registered.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <dialog
+                class="review-dialog"
+                id="reviewDialog"
+                aria-labelledby="reviewTitle"
+                aria-describedby="reviewDetails"
+            >
+                <form method="dialog">
+                    <h2 id="reviewTitle">Review application</h2>
+                    <p id="reviewDetails"></p>
+                    <div class="dialog-actions">
+                        <button class="btn btn-outline" value="cancel" autofocus>Cancel</button>
+                        <button class="btn btn-primary" id="confirmReview" value="confirm">Confirm</button>
+                    </div>
+                </form>
+            </dialog>
+        </main>
+        <script src="js/js/auth.js"></script>
+        <script src="js/js/admin.js"></script>
+    </body>
+</html>
